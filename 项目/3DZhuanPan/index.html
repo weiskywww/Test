@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	</head>
+
+	<body>
+		<div class="all">
+			<!--首页-->
+			<div class="page" style="padding-top: 158px;">
+				<p>今天还要 <span>1</span>抽奖机会</p>
+				<div>
+					<div class="main" >
+						<img src="image/open.png" class="main-Aimg"    onclick="showDiv()"   />
+						<div class="icon-img icon-img1"></div>
+						<img src="image/zhijia.png" class="main-Bimg" />
+					</div>
+				</div>
+
+				<div class="flex-box">
+					<div class="flex-item">
+						<!--image/huafei.png-->
+						<img src="image/kaob1.png" />
+					</div>
+					<div class="flex-item">
+						<!--<img src="image/liulian.png" />-->
+						<img src="image/kaob2.png" /> 
+					</div>
+					<div class="flex-item">
+						<!--<img src="image/yewu.png">-->
+						<img src="image/kaob3.png" /> 
+					</div>
+				</div>
+				<div class="btn">
+					<button   onclick="showBut()">活动规则	</button>
+					<button  onclick="showButNull()">我的奖品</button>
+				</div>
+				
+			</div>
+			
+			<!--遮罩1-->
+			<div class="shade" id="shade" onclick="shadeClick()">
+				<div class="shade-img" id="shade-img">
+					<img src="image/zhez1.png" />
+				</div>
+			</div>
+
+			<!--遮罩2-->
+			<div class="shade" id="shade2">
+				<div class="shade-img1" id="shade-img1">
+					<img src="image/zhez2.png" />
+				</div>
+			</div>
+
+			<!--弹窗规则-->
+			<div class="shade activityBox" id="shad3"  onclick="close()">
+				<div class="activity" id="activity">
+					<img src="image/xingzhuang.png" class="act-aimg" onclick="closeRule()" />
+					<div class="acp">活动规则</div>
+					<div class="acp1">活动时间:</div>
+					<div class="acp2">2018年6月21日-2018年7月6日（以实际上线时间为准）</div>
+					<div class="acp1">参与方式:</div>
+					<div class="acp2">
+					<div >1、进入活动点击“天降2G，玩转一夏”即可参与活动；</div>
+					<div>2、用户可重复答题；</div>
+					<div>3、优惠券和流量奖品每位用户分别只能兑</div>
+					<div>4、被分享的好友，如果想参与“天降2G，玩转一夏”活动，必须关注“中国移动10086”手Q公众号并绑定手机号才能参与活动</div>
+					</div>
+					<div class="acp1">奖品设置:</div>
+					<div class="acp2">
+					<div class="ps">奖品</div>
+					<div>份数</div>
+					<div class="ps ps1">300M</div>
+					<div>5000</div>
+					<div class="ps ps2">1G</div>
+					<div>500</div>
+					<div class="ps ps3">优惠券</div>
+					<div>5000000</div>
+					</div>
+					<div class="acp1">注意事项:</div>
+					<div class="acp2">1、活动期间，用户需要持续订阅并绑定“中国移动10086”手机QQ公众号，若取消订阅与绑定则无法发放奖品。</div>
+					</div>
+					
+            </div>
+
+			<!--活动结束-->
+			<div class="shade endBox">
+				<div class="end">
+					<div class="enp">活动已结束下次早点来哦！</div>
+				</div>
+			</div>
+            
+            <!--绑定-->
+			<div class="shade bindsBox">
+				<div class="binds">
+					<div class="binp">亲，您还没有订阅“中国移动10086”手Q公众号或绑定手机号哦~</div>
+					<div class="btn">
+						<button>关注公众号</button>
+						<button>绑定手机号</button>
+					</div>
+					<div class="binps">温馨提示：打开手Q-点击右上角“添加”选择“找公众号”-输入“中国移动10086”-关注公众号</div>
+				</div>
+			</div>
+
+            <!--流量-->
+			<div class="shade huodeBox">
+				<div class="huode">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1" />
+					<div class="hp1">恭喜135****8796转到</div>
+					<div class="hp2">1G</div>
+					<div class="hp3">
+						温馨提示：流量奖品将会在30个工作日内充值到账
+					</div>
+					<div class="btn btns">
+							<button>戳我查看更多福利</button>
+						</div>
+				</div>
+			</div>
+		    
+		    <!--优惠券-->
+		     <div class="shade coupponBox">
+				<div class="couppon">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1 aimg2" />
+					<div class="hp1 cop">恭喜135****8796转到</div>
+					<div class="hp2">优惠券</div>
+					<div class="hp3">
+						温馨提示：优惠券奖品同一用户只能兑换一次，请点击上方按钮前往兑换领取，优惠券使用规则以兑换页面为准。
+					</div>
+					<div class="btn btns">
+							<button>前往领取</button>
+						</div>
+				</div>
+			</div>
+			
+			<!--优惠券-->
+		     <div class="shade changeBox" id="chage">
+				<div class="change">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1" onclick="closeRule()" />
+					<div class="chp">今天的机会用完了哟，</div>
+					<div class="chp chp1">下次再来吧~</div>
+						<div class="btn btns">
+							<button onclick=" showButs()">喊上好友一起来转</button>
+						</div>
+				</div>
+			</div>
+			<!--矩形-->
+			<div class="shade recBox ">
+				<div class="rec">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+					<div class="btnas">
+					<button class="aa">优惠劵奖品</button>
+					<button class="bb">流量奖品</button>
+				   </div>
+				   
+				   <div class="hp1 re">恭喜135****8796转到</div>
+					<div class="hp2">1G</div>
+					<div class="hp3">
+						温馨提示：流量奖品将会在30个工作日内充值到账
+					</div>
+					<div class="btn btns">
+							<button>戳我查看更多福利</button>
+						</div>
+				</div>
+			</div>
+		
+		   <!--优惠券奖品-->
+		     <div class="shade coupponBoxa">
+				<div class="couppona">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+					<div class="btnas">
+					<button class="bb">优惠券奖品</button>
+					<button class="aa">流量奖品</button>
+				</div>
+					<div class="hp1 cop">恭喜135****8796转到</div>
+					<div class="hp2">优惠券</div>
+					<div class="hp3">
+						温馨提示：优惠券奖品同一用户只能兑换一次，请点击上方按钮前往兑换领取，优惠券使用规则以兑换页面为准。
+					</div>
+					<div class="btn btns">
+							<button style="margin-top: 0;">前往领取</button>
+						</div>
+				</div>
+			</div>
+		
+		
+		<!--空-->
+		
+		     <div class="shade nullBoxa" id="nullde" onclick="closeRule()">
+				<div class="nulla"  id="nulldes">
+					<img src="image/xingzhuang.png" class="act-aimg aimg1" />
+					<div class="btnas">
+					<button class="bb">优惠券奖品</button>
+					<button class="aa">流量奖品</button>
+				</div>
+				<div class="nullp">
+					<div >
+						空空如也
+						</div>
+						<div >亲，您还没有奖品入袋哟</div>
+				</div>
+			</div>
+			</div>
+		
+		  <!--再摇一次-->
+		     <div class="shade againBox">
+		     	<div class="againo">
+		     		<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+		     				<img src="image/icon2.png" class="mains-a" />
+		     				<div class="agap">好可惜，没有中奖，没关系，甜甜的糖果，吃进嘴里，甜进心里</div>
+						<div class="btn btns">
+							<button>再摇一次</button>
+						</div>
+		     		</div>
+		     	</div>
+		     
+		     <!--再摇一次1-->
+		     <div class="shade againoneBox">
+		     	<div class="againo">
+		     		<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+		     				<img src="image/icon3.png" class="mains-b" />
+		     					<div class="agap">好可惜哟，奖品与您擦肩而过，正逢暖心杨梅好时节，吃一个酸酸甜甜</div>
+						<div class="btn btns">
+							<button>再摇一次</button>
+						</div>
+					</div>
+		     		</div>
+		
+		 <!--再摇一次2-->
+		     <div class="shade eatBox">
+		     	<div class="eat">
+		     		<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+		     				<img src="image/icon4.png" class="mains-c" />
+		     				<div class="agap">好可惜哟，差一点点就中奖了耶，吃个鸡腿加把劲。
+</div>
+						<div class="btn btns">
+							<button>再摇一次</button>
+						</div>
+		     		</div>
+		     	</div>
+		
+		 <!--再摇一次3-->
+		     <div class="shade cardBox">
+		     	<div class="card">
+		     		<img src="image/xingzhuang.png" class="act-aimg aimg1 aimga" />
+		     				<img src="image/icon5.png" class="mains-d" />
+		     				<div class="agap">好可惜哟，奖品与您擦肩而过，不灰心，浪漫明信片与您相伴。
+</div>
+						<div class="btn btns">
+							<button>再摇一次</button>
+						</div>
+		     		</div>
+		     	</div>
+		
+		<!--再摇一次4-->
+		     <div class="shade riceBox">
+		     	<div class="rice">
+		     		<img src="image/xingzhuang.png" class="act-aimg aimg2" />
+		     				<img src="image/icon6.png" class="mains-e" />
+		     				
+		     				<div class="agap">好可惜哟，奖品与您擦肩而过，没事儿，来一碗拉面压压惊哈~
+</div>
+						<div class="btn btns">
+							<button>再摇一次</button>
+						</div>
+		     		</div>
+		     	</div>
+		     	
+		     	  <div class="shade shareBox" id="share">
+		     	  <div class="share">
+					</div>
+		     		</div>
+		
+		</div>
+
+
+
+		
+	</body>
+	<script type="text/javascript" src="js/click.js"></script>
+</html>
